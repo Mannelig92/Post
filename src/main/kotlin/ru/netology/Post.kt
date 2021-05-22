@@ -1,0 +1,30 @@
+package ru.netology
+
+data class Post(
+    val id: Int,
+    val ownerId: Int,
+    val fromId: Int,
+    val createdBy: Int,
+    val date: Int,
+    val text: String,
+    val replyOwnerId: Int,
+    val replyPostId: Int,
+    val friendsOnly: Boolean = true,
+    val comments: Object,
+    val copyright: Object,
+    val likes: Object,
+    val reposts: Object,
+    val views: Object,
+    val postType: String,
+    val signerId: Int,
+    val canPin: Boolean,
+    val canDelete: Boolean,
+    val canEdit: Boolean,
+    val isPinned: Boolean = true,
+    val markedAsAds: Boolean,
+    val isFavorite: Boolean,
+    val donut: Object,
+    val postponedId: Int
+) {
+
+}
