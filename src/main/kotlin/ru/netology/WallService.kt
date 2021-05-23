@@ -1,6 +1,6 @@
 package ru.netology
 
-object WallService {
+class WallService {
     var posts = emptyArray<Post>()           //создание массива
     fun add(post: Post): Post {             //метод для создания записи
         var post = post.copy(id = if (posts.isEmpty()) 1 else posts.last().id + 1)
