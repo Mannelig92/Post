@@ -35,7 +35,10 @@ class WallServiceTest {
                 true,
                 true,
                 33,
-                21
+                21,
+                "text5",
+                "text5",
+                "text5"
             )
         )
         val result = Post(
@@ -62,7 +65,10 @@ class WallServiceTest {
             true,
             true,
             33,
-            21
+            21,
+            "text5",
+            "text5",
+            "text5"
         )
         assertEquals(result,add)
     }
@@ -97,7 +103,10 @@ class WallServiceTest {
                 true,
                 true,
                 3,
-                2
+                2,
+                "text5",
+                "text5",
+                "text5"
             )
         )
         service.add(
@@ -125,7 +134,10 @@ class WallServiceTest {
                 true,
                 true,
                 8,
-                4
+                4,
+                "text5",
+                "text5",
+                "text5"
             )
         )
         service.add(
@@ -153,7 +165,10 @@ class WallServiceTest {
                 true,
                 true,
                 17,
-                23
+                23,
+                "text5",
+                "text5",
+                "text5"
             )
         )
         // создаём информацию об обновлении
@@ -181,7 +196,10 @@ class WallServiceTest {
             true,
             true,
             617,
-            923
+            923,
+            "text5",
+            "text5",
+            "text5"
         )
 
         // выполняем целевое действие
@@ -220,7 +238,10 @@ class WallServiceTest {
                 true,
                 true,
                 3,
-                2
+                2,
+                "text5",
+                "text5",
+                "text5"
             )
         )
         // создаём информацию об обновлении
@@ -248,7 +269,10 @@ class WallServiceTest {
             true,
             true,
             617,
-            923
+            923,
+            "text5",
+            "text5",
+            "text5"
         )
         // выполняем целевое действие
         val result = service.update(updateFalse)
