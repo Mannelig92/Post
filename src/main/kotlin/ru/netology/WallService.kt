@@ -1,7 +1,8 @@
 package ru.netology
 
 class WallService {
-    var posts = emptyArray<Post>()           //создание массива
+    private var posts = emptyArray<Post>()           //создание массива
+    private var comments = emptyArray<Comment>()
     fun add(post: Post): Post {             //метод для создания записи
         var post = post.copy(id = if (posts.isEmpty()) 1 else posts.last().id + 1)
         posts += post
@@ -16,5 +17,13 @@ class WallService {
             }
         }
         return false
+    }
+
+    fun createComment(comment: Comment) {
+        for (i in posts) {
+            if (i.id == comment.postId) {
+                comments += comment
+            } else throw PostNotFoundException("Идентификатор не совпадает")
+        }
     }
 }

@@ -70,7 +70,7 @@ class WallServiceTest {
             "text5",
             "text5"
         )
-        assertEquals(result,add)
+        assertEquals(result, add)
     }
 
     @Test
@@ -209,6 +209,7 @@ class WallServiceTest {
         assertTrue(result)
     }
 
+    @Test
     fun updateFalse() {
         // создаём целевой сервис
         val service = WallService()
@@ -281,4 +282,101 @@ class WallServiceTest {
         assertFalse(result)
     }
 
+    @Test
+    fun createCommentTrue() {
+        // создаём целевой сервис
+        val service = WallService()
+        service.add(
+            Post(
+                1,
+                0,
+                1,
+                1,
+                5,
+                "text",
+                1,
+                1,
+                true,
+                "text",
+                "text",
+                3,
+                2,
+                1,
+                "text",
+                2,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                3,
+                2,
+                "text5",
+                "text5",
+                "text5"
+            )
+        )
+        service.createComment(
+            Comment(
+                1,
+                1,
+                3,
+                "HI",
+                22,
+                34,
+                12,
+                123
+            )
+        )
+    }
+
+    @Test(expected = PostNotFoundException::class)
+    fun createCommentFalse() {
+// создаём целевой сервис
+        val service = WallService()
+        service.add(
+            Post(
+                1,
+                0,
+                1,
+                1,
+                5,
+                "text",
+                1,
+                1,
+                true,
+                "text",
+                "text",
+                3,
+                2,
+                1,
+                "text",
+                2,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                3,
+                2,
+                "text5",
+                "text5",
+                "text5"
+            )
+        )
+        service.createComment(
+            Comment(
+                2,
+                2,
+                3,
+                "HI",
+                22,
+                34,
+                12,
+                123
+            )
+        )
+    }
 }

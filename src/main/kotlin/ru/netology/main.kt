@@ -1,5 +1,8 @@
 package ru.netology
 
-fun main() {
+import java.lang.RuntimeException
 
+class PostNotFoundException(message: String): RuntimeException(message)
+
+fun main() {
 }
